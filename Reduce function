@@ -1,0 +1,4 @@
+rom functools import reduce
+def product(fracs):
+    t = reduce(Fraction.__mul__,fracs)
+    return t.numerator, t.denominator
