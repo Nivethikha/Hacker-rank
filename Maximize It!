@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+K, M = tuple(map(int, input().strip().split()))
+possible = {0}
+for i in range(K):
+    count, *nums = list(map(int, input().split()))
+    assert count == len(nums)
+    vals = {pow(x, 2, M) for x in nums}
+    possible = {(a + v) % M for a in possible for v in vals}
+print(max(possible))
