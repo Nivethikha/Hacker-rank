@@ -1,0 +1,8 @@
+def wrapper(f):
+    def fun(l):
+        new = []
+        for i in l:
+            new.append("+91 " + i[-10:-5] + " " + i[-5:])
+            
+        return f(new)
+    return fun
