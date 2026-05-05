@@ -1,0 +1,7 @@
+mport numpy as np
+needs = ['zeros','ones']
+ip = list(map(int,input().split()))
+for _ in needs:
+    print(getattr(np,_)(ip,dtype=int))
+
+
