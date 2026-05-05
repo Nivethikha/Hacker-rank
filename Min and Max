@@ -1,0 +1,5 @@
+import numpy
+n,m=map(int,input().split())
+l=numpy.array([input().split() for _ in range(n)],int)
+a=numpy.min(l,axis=1)
+print(numpy.max(a))
